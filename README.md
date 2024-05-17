@@ -1,10 +1,10 @@
- Hotel Aggregator
+ otel Aggregator
 
 This application works as an aggregator of hotels from different data sources.
 
 Documentation for my work process is [here](docs/worklog.md).
 
-The application is deployed at: *TBD*
+The application is deployed on [Heroku](https://hotel-aggregator-2a3bebab4939.herokuapp.com/)
 
 ## Stack
 
