@@ -46,3 +46,10 @@ We will use `thin` as it is simple and lightweight.
 ```
 bundle config build.thin --with-cflags="-Wno-error=implicit-function-declaration"
 ```
+
+## Build source integration
+
+Next, we integrate with individual suppliers. We will use HTTParty to send request to the supplier APIs:
+- https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/acme
+- https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/patagonia
+- https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/paperflies

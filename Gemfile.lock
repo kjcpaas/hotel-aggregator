@@ -2,11 +2,20 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    bigdecimal (3.1.8)
+    csv (3.3.0)
     daemons (1.4.1)
     diff-lcs (1.5.1)
     eventmachine (1.2.7)
+    httparty (0.22.0)
+      csv
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     json (2.7.2)
     language_server-protocol (3.17.0.3)
+    mini_mime (1.1.5)
+    multi_xml (0.7.1)
+      bigdecimal (~> 3.1)
     mustermann (3.0.0)
       ruby2_keywords (~> 0.0.1)
     parallel (1.24.0)
@@ -67,6 +76,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  httparty
   rspec
   rubocop
   sinatra (~> 3.0.0)
