@@ -25,3 +25,24 @@ For this part, we setup a simple web server with Sinatra. We will just provide a
 For this part, we will setup Rubocop and Rspec quickly so we can next setup a simple CI/CD pipeline. We will do this first so we can smoothly push all changes later and ensure nothing breaks along the way.
 
 The tools that will be installed are RSpec and Rubocop.
+
+## Setup CI/CD
+
+Using Github actions, we will setup the following:
+
+### CI
+
+- rubocop
+- rspec
+
+### Deployment
+
+Deploy to Heroku. We will need to install a web server that will run our app on Heroku.
+
+We will use `thin` as it is simple and lightweight.
+
+**NOTE**: `thin` may run into installation issues on Mac. Run the following before running `bundle install`:
+
+```
+bundle config build.thin --with-cflags="-Wno-error=implicit-function-declaration"
+```

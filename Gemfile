@@ -3,7 +3,8 @@
 source 'https://rubygems.org'
 ruby File.read('.ruby-version').strip
 
-gem 'sinatra'
+gem 'sinatra', '~> 3.0.0'
+gem 'thin', '>= 1.8.0'
 
 group :development, :test do
   gem 'rubocop', require: false
