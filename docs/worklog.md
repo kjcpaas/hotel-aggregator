@@ -84,3 +84,21 @@ This should return 1 or nothing.
 We need to filter the hotel list returned by each supplier by the destination id.
 
 This should return a list of hotels. It is an empty list when not hotels are found with the destination id.
+
+## Merging individual records
+
+Now that we have completed the data cleaning for each supplier, we will now need to merge individual hotel records.
+
+The specification states that we aim to have *as complete information as possible*.
+
+Hence these considerations are taken into account when merging.
+
+- Hotel only is considered non-existent **if and only if** it is not in any of the supplier list. If it exists in at least one, we consider it as existent.
+- nil values have the **lowest priority when merging**
+- We will take the **longest** string as the most valid. We consider this as more "complete" information. In case of a tie, we choose randomly.
+- For numbers, we will take the one with **more precision**, i.e. more decimal places. In case of a tie, we choose randomly
+- For arrays, we will combine them and remove duplicates
+
+We will not use domain knowledge (which is missing from the given information) to test validity as is required more complex data analysis that the specifications don't ask for.
+
+Hence, if one supplier has the country "Japan" while the other has "Qatar", we will treat them **equally valid**. Otherwise, we will need to check the coordinates to figure out the correct country, which goes way beyond what the specifications ask, which goes way beyond what the specifications ask. Other fields have similar considerations and we will **not** handle those cases in this application.
