@@ -1,2 +1,6 @@
 Style/Documentation:
   Enabled: false
+
+# Allow longer blocks for Rspec
+Metrics/BlockLength:
+  AllowedMethods: ['describe', 'context', 'it']

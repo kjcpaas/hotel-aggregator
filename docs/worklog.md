@@ -19,7 +19,6 @@ Other tools may be added along the way as the need arise.
 ## Initial setup
 
 For this part, we setup a simple web server with Sinatra. We will just provide a root path that returns a simple json message.
-
 ## Setup tools
 
 For this part, we will setup Rubocop and Rspec quickly so we can next setup a simple CI/CD pipeline. We will do this first so we can smoothly push all changes later and ensure nothing breaks along the way.
@@ -53,3 +52,19 @@ Next, we integrate with individual suppliers. We will use HTTParty to send reque
 - https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/acme
 - https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/patagonia
 - https://5f2be0b4ffc88500167b85a0.mockapi.io/suppliers/paperflies
+
+## Standardizing the hotel structure
+
+Each supplier has different formats of hotel data. For example, the field names are different like in hotel id, which can be `id`, `Id`, or `hotel_id`.
+
+In addition, some have different structures like for amenities/facilities, which is categorized for Paperflies but not for others.
+
+We have to create models to provide standard format for Hotel data so we can effectively facilitate the filtering and merging.
+
+### Building standard models
+
+We need to provide models for standard data structure.
+
+### Mapping supplier data to standard data
+
+After creating the standard models, we also need to map the data from the suppliers to the standard data structures.
