@@ -68,3 +68,19 @@ We need to provide models for standard data structure.
 ### Mapping supplier data to standard data
 
 After creating the standard models, we also need to map the data from the suppliers to the standard data structures.
+
+## Implementing queries
+
+Now that we have standardized data structure, we can proceed to implementing queries.
+
+### Find by hotel ID
+
+We need to filter the hotel list returned by each supplier by the id.
+
+This should return 1 or nothing.
+
+### Find by destination ID
+
+We need to filter the hotel list returned by each supplier by the destination id.
+
+This should return a list of hotels. It is an empty list when not hotels are found with the destination id.
