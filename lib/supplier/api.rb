@@ -17,9 +17,12 @@ module Supplier
       hotels.find { |h| h.id == id }
     end
 
-    def find_hotels_by_destination(id)
+    def find_hotels_by_destination(id = nil)
+      # Do not filter if destination is nil
+      return hotels if id.nil?
+
       hotels.filter do |h|
-        h.destination_id == id
+        h.destination_id.to_s == id.to_s
       end
     end
 

@@ -115,3 +115,9 @@ The strategy we can do here, is to:
 - apply individual merger (from previous part) to each group
 
 With this, we are left without any duplicates and the well-tested merging logic we have developed applies.
+
+## Exposing the functionality via API
+
+Now that we have the functionalities, we will deploy it via api.
+
+We will create a "/hotel" end point for this.

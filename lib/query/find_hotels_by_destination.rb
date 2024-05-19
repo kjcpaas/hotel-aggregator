@@ -9,7 +9,7 @@ module Query
   class FindHotelsByDestination
     attr_accessor :destination_id, :result
 
-    def initialize(destination_id)
+    def initialize(destination_id = nil)
       @destination_id = destination_id
     end
 
