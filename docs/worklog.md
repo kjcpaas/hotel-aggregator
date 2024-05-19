@@ -121,3 +121,9 @@ With this, we are left without any duplicates and the well-tested merging logic 
 Now that we have the functionalities, we will deploy it via api.
 
 We will create a "/hotel" end point for this.
+
+## Performance considerations
+
+I have ideas on how to improve the performance of the system. However, as this will take longer to implement (and I am out of time), and I don't want to complicate the system by adding a data store, I decided **not** to implement it.
+
+Please search for "NOTES: performance" to see my notes around this.

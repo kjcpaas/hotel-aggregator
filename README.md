@@ -55,3 +55,7 @@ Pipeline is built using Github Actions to facilitate the following:
 - Code quality via rubocop (barebones)
 - Running tests
 - Deploying to Heroku
+
+## Performance considerations
+
+I did not implement further performance improvements. However, search for "NOTES: performance" to see my notes around this.
