@@ -4,3 +4,11 @@ Style/Documentation:
 # Allow longer blocks for Rspec
 Metrics/BlockLength:
   AllowedMethods: ['describe', 'context', 'it']
+
+# Allow longer functions for mapping
+Metrics/MethodLength:
+  AllowedMethods: ['map_from_api_data']
+
+# Allow higher ABC size for mapping functions as it is full of assignments
+Metrics/AbcSize:
+  AllowedMethods: ['map_from_api_data']

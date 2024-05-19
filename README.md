@@ -1,4 +1,4 @@
- otel Aggregator
+# Hotel Aggregator
 
 This application works as an aggregator of hotels from different data sources.
 
