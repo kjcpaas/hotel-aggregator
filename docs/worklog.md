@@ -102,3 +102,16 @@ Hence these considerations are taken into account when merging.
 We will not use domain knowledge (which is missing from the given information) to test validity as is required more complex data analysis that the specifications don't ask for.
 
 Hence, if one supplier has the country "Japan" while the other has "Qatar", we will treat them **equally valid**. Otherwise, we will need to check the coordinates to figure out the correct country, which goes way beyond what the specifications ask, which goes way beyond what the specifications ask. Other fields have similar considerations and we will **not** handle those cases in this application.
+
+## Merging array of objects
+
+For array of objects like images or hotels, it requires additional consideration top of simply joining arrays and removing duplicates.
+
+In these cases, we determine if 2 objects are the same by a "primary key", which in the case of hotel is the id, while it is the URL for images.
+
+The strategy we can do here, is to:
+- concatenate all arrays
+- group by primary key
+- apply individual merger (from previous part) to each group
+
+With this, we are left without any duplicates and the well-tested merging logic we have developed applies.

@@ -31,8 +31,34 @@
         "HairDryer"
     ],
     "images": {
-        "room": [],
-        "amenities": []
+        "amenities": [
+            {
+                "caption": "Restaurant",
+                "url": "https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i1_m.jpg"
+            },
+            {
+                "caption": "Hotel Exterior",
+                "url": "https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i2_m.jpg"
+            },
+            {
+                "caption": "Entrance",
+                "url": "https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i5_m.jpg"
+            },
+            {
+                "caption": "Bar",
+                "url": "https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i24_m.jpg"
+            }
+        ],
+        "room": [
+            {
+                "caption": "Double room",
+                "url": "https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i93_m.jpg"
+            },
+            {
+                "caption": "Bathroom",
+                "url": "https://d2ey9sqrvkqdfs.cloudfront.net/Sjym/i94_m.jpg"
+            }
+        ]
     },
     "booking_conditions": []
 }

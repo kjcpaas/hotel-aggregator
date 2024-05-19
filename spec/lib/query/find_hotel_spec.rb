@@ -32,7 +32,7 @@ describe Query::FindHotel do
     let(:id) { 'iJhz' }
     let(:merged_json) { parsed_json(hotel_merged(id)) }
 
-    it 'priotizes the more complete data in the merge' do
+    it 'prioritizes the more complete data in the merge' do
       hotel = Query::FindHotel.new(id).perform
 
       expect(hotel.data).to eq merged_json
@@ -48,7 +48,7 @@ describe Query::FindHotel do
       expect(hotel).to_not be_nil
     end
 
-    it 'priotizes the more complete data in the merge' do
+    it 'prioritizes the more complete data in the merge' do
       hotel = Query::FindHotel.new(id).perform
 
       expect(hotel.data).to eq merged_json

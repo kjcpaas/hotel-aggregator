@@ -46,7 +46,7 @@ describe Supplier::Api do
 
     describe 'find_hotels_by_destination' do
       it 'returns empty array when no hotels exist in destination' do
-        expect(subject.find_hotels_by_destination(00000)).to eq []
+        expect(subject.find_hotels_by_destination(0o0000)).to eq []
       end
 
       it 'returns hotels that are all in the destination' do

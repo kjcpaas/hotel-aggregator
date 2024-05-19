@@ -15,6 +15,10 @@ module JSONFilenameHelpers
     File.join('hotels', 'merged', "#{id}.json")
   end
 
+  def destination_merged(destination_id)
+    File.join('destinations', 'merged', "#{destination_id}.json")
+  end
+
   def supplier_response(supplier)
     File.join('supplier_responses', "#{supplier}.json")
   end

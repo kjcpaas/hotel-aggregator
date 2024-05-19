@@ -2,6 +2,8 @@
 
 require_relative './base'
 require_relative './location'
+require_relative './image'
+require_relative './object_array'
 require_relative '../model/hotel'
 
 module Merger
@@ -33,10 +35,9 @@ module Merger
         location: merge_locations,
         amenities: merge_arrays(:amenities),
         booking_conditions: merge_arrays(:booking_conditions),
-        # TODO: WILL be handled when we combine hotel arrays as it's same strategy
         images: {
-          rooms: [],
-          amenities: []
+          room: merge_images(:room),
+          amenities: merge_images(:amenities)
         }
       }
     end
@@ -52,6 +53,15 @@ module Merger
     def merge_locations
       locations = data_list.map { |dl| dl[:location] }
       Merger::Location.new(locations).result
+    end
+
+    def merge_images(category)
+      images = data_list.map do |dl|
+        dl.dig(:images, category)
+      end
+
+      arr_merger = Merger::ObjectArray.new(images, Merger::Image) { |img| img[:url] }
+      arr_merger.result.map(&:data)
     end
   end
 end
